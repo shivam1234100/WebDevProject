@@ -1,0 +1,1300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lorem_Impsum</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+:root {
+    --primary: rgb(47, 71, 113);
+    --secondary: rgb(61, 168, 223);
+    --tertiary: rgb(255, 255, 255);
+
+    --dark: rgb(0, 0, 0);
+    
+    --transition: 0.15s ease-in-out;
+}
+
+@keyframes hover {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-40px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+    transition: var(--transition);
+}
+
+
+
+
+.navbar {
+    padding: 1rem 2rem;
+    background-color: var(--primary);
+    color: var(--tertiary);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: var(--tertiary);
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.navbar a:hover {
+    color: var(--secondary);
+}
+
+.navbar-logo {
+    font-size: 1.5rem !important;
+    font-weight: 600;
+}
+
+.navbar-logo > .navbar-logo-link {
+    font-size: 1.5rem !important;
+    font-weight: 700 !important;
+}
+
+.navbar-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
+
+.navbar-menu-list {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
+
+.navbar-menu-item-dropdown {
+    position: relative;
+}
+
+.navbar-menu-dropdown {
+    position: absolute;
+    list-style: none;
+    width: max-content;
+    background: var(--tertiary);
+    color: var(--dark);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    display: none;
+}
+
+.navbar-menu-item-dropdown:hover > .navbar-menu-dropdown {
+    display: block;
+}
+
+.navbar-menu-dropdown-item {
+    padding: 0.5rem 1rem;
+    color: var(--dark);
+    background: rgba(0, 0, 0, 0);
+    cursor: pointer;
+}
+
+.navbar-menu-dropdown-item:hover {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.navbar-menu-dropdown-item > a {
+    color: var(--dark);
+    font-size: 0.8rem !important;
+}
+
+.navbar-cta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-cta-button {
+    padding: 0.5rem 1rem;
+    border: 2px solid var(--secondary);
+    border-radius: 2rem;
+    background-color: transparent;
+    color: var(--tertiary);
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.navbar-cta-button:hover {
+    background-color: var(--secondary);
+    color: var(--tertiary);
+}
+
+.header {
+    padding: 2rem;
+    background-color: var(--primary);
+    color: var(--tertiary);
+    width: 100%;
+    height: 75vh;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+.header-content-left {
+    width: 50%;
+    padding: 2rem;
+}
+
+.header-main {
+    margin-bottom: 4rem;
+}
+
+.header-title {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 0.3rem;
+}
+
+.header-text {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--tertiary);
+    opacity: 0.65;
+}
+
+.header-button:first-of-type {
+    border: 2px solid var(--secondary);
+    border-radius: 2rem;
+    background-color: var(--secondary);
+    color: var(--tertiary);
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.header-button:first-of-type:hover {
+    background-color: var(--tertiary);
+    color: var(--dark);
+}
+
+.header-button {
+    padding: 0.75rem 1.25rem;
+    border: none;
+    border-radius: 2rem;
+    background-color: transparent;
+    color: var(--tertiary);
+    font-weight: 500;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-left: 0.5rem;
+}
+
+
+.header-button:hover {
+    background-color: var(--secondary);
+    color: var(--tertiary);
+}
+
+.header-content-right {
+    width: 50%;
+}
+
+.header-content-right > img {
+    width: 100%;
+    animation: hover 5s infinite linear;
+}
+
+.section {
+    padding: 2rem;
+    background-color: var(--tertiary);
+    color: var(--dark);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.alt-section {
+    padding: 2rem;
+    background-color: rgba(0, 0, 0, 0.1);
+    color: var(--dark);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.section-heading {
+    font-size: 1.5rem;
+    font-weight: 900;
+    padding: 2rem;
+    border-bottom: 2px solid var(--dark);
+    color: var(--primary);
+}
+
+.about-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    padding: 2rem;
+    gap: 2rem;
+}
+
+.about-content-left {
+    width: 50%;
+}
+
+.about-content-left-text {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--dark);
+    margin-bottom: 1rem;
+}
+
+.about-content-left-list {
+    list-style: none;
+    padding: 0;
+}
+
+.about-content-left-list > li {
+    padding-left: 1.3em;
+}
+
+.about-content-left-list > li:before {
+    content: "\f560";
+    font-family: FontAwesome;
+    display: inline-block;
+    margin-left: calc(1.3em * -1);
+    width: 1.3em;
+    color: var(--secondary);
+}
+
+.about-content-right {
+    width: 50%;
+}
+
+.about-content-right-text {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--dark);
+    margin-bottom: 1rem;
+}
+
+.about-content-right-button {
+    padding: 0.5rem 1rem;
+    border: 2px solid var(--secondary);
+    border-radius: 0.5rem;
+    background-color: transparent;
+    color: var(--secondary);
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 0.75rem;
+    margin-left: 0.5rem;
+}
+
+.about-content-right-button:hover {
+    background-color: var(--secondary);
+    color: var(--tertiary);
+}
+
+.services-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 2rem;
+    gap: 2rem;
+}
+
+.services-content-text {
+    text-align: center;
+}
+
+.cards {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    gap: 1rem;
+}
+
+.card {
+    padding: 2rem;
+    background-color: var(--tertiary);
+    color: var(--dark);
+    border-radius: 1rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.card-icon {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--secondary);
+    margin-bottom: 0.75rem;
+}
+
+.card-content {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--dark);
+    margin-bottom: 1rem;
+}
+
+.card-content > .card-content-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0.3rem;
+    color: var(--primary);
+}
+
+.card-content > .card-content-text {
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    color: var(--dark);
+    opacity: 0.65;
+}
+
+.portfolio-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 2rem;
+    gap: 2rem;
+}
+
+.portfolio-content-text {
+    text-align: center;
+}
+
+.tab-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.5rem;
+    border-radius: 1.5rem;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.tab-button {
+    padding: 0.25rem 0.75rem;
+    border: none;
+    border-radius: 0.75rem;
+    background-color: transparent;
+    color: var(--dark);
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 0.75rem;
+}
+
+.tab-button:hover {
+    background-color: var(--secondary);
+    color: var(--tertiary);
+}
+
+.tab-button-active {
+    background-color: var(--secondary);
+    color: var(--tertiary);
+}
+
+.tabs-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    gap: 1rem;
+    padding: 2rem;
+}
+
+.tab {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.tab > .column {
+    padding: 0;
+    width: 33%;
+}
+
+.tab > .column > img {
+    width: 100%;
+    margin: 0;
+    margin-bottom: 1rem;
+    transform: scale(1);
+}
+
+.tab > .column > img:hover {
+    transform: scale(1.1);
+}
+
+.team-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 2rem;
+    gap: 2rem;
+}
+
+.team-content-text {
+    text-align: center;
+}
+
+.team-cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.user-card {
+    background-color: var(--tertiary);
+    color: var(--dark);
+    border-radius: 0.5rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+    width: 48%;
+}
+
+.user-card-image {
+    width: 35%;
+    padding: 0.75rem;
+}
+
+.user-card-image > img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+.user-card-content {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.user-card-name {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0.1rem;
+    color: var(--secondary);
+}
+
+.user-card-role {
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    color: var(--dark);
+    opacity: 0.65;
+}
+
+.user-card-content > hr {
+    margin-bottom: 0.5rem;
+    width: 30%;
+}
+
+.user-card-bio {
+    font-size: 0.75rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    color: var(--dark);
+    opacity: 0.65;
+}
+
+.user-card-socials {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    gap: 1rem;
+}
+
+.user-card-socials > a {
+    background-color: rgba(0, 0, 0, 0.1);
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--primary);
+    text-decoration: none;
+}
+
+.user-card-socials > a:hover {
+    background-color: var(--secondary);
+    color: var(--tertiary);
+}
+
+.contact-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 2rem;
+    gap: 2rem;
+}
+
+.contact-content-text {
+    text-align: center;
+}
+
+.contact-panel {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 1rem;
+}
+
+.contact-details {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 1rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border-bottom: 2px solid var(--secondary);
+    border-top: 2px solid var(--secondary);
+}
+
+.contact-details-item {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+    margin: 0.5rem 0;
+}
+
+.contact-details-item > .details-item-icon {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--secondary);
+    background-color: rgba(0, 0, 0, 0.1);
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    height: 3.5rem;
+    width: 3.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-details-item > .details-icon-content {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--dark);
+}
+
+.details-icon-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary);
+}
+.line{
+    display:flex;
+    justify-content:space-around;
+    height:60px;
+}
+
+.details-icon-text {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--dark);
+}
+
+.contact-form {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border-bottom: 2px solid var(--secondary);
+    border-top: 2px solid var(--secondary);
+}
+
+.main-form {
+    text-align: center;
+}
+
+.form-user-info {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 0.5rem 1rem;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 0.25rem;
+    background-color: transparent;
+    color: var(--dark);
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+form input:focus, form textarea:focus {
+    outline: none;
+    border: 1px solid var(--secondary);
+}
+
+form input:hover, form textarea:hover {
+    border: 1px solid var(--secondary);
+}
+
+form label {
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--dark);
+}
+
+.form-subject {
+    text-align: left;
+    margin-bottom: 1rem;
+}
+
+.form-message {
+    text-align: left;
+    margin-bottom: 1rem;
+}
+
+.form-button {
+    padding: 0.5rem 1rem;
+    border: 2px solid var(--secondary);
+    border-radius: 1.25rem;
+    background-color: var(--secondary);
+    color: var(--tertiary);
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-left: 0.5rem;
+}
+
+.form-button:hover {
+    background-color: var(--tertiary);
+    color: var(--dark);
+}
+
+.footer {
+    padding: 2rem;
+    background-color: var(--tertiary);
+    color: var(--dark);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.footer-column {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.footer-column-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+h2.footer-column-title {
+    font-size: 2rem;
+}
+
+.footer-column-text {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--dark);
+}
+
+.footer-column-list {
+    list-style: none;
+    padding: 0;
+    padding-left: 1.3em;
+}
+
+.footer-column-list > li {
+    padding-left: 1.3em;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.footer-column-list > li:first-of-type {
+    margin-top: 0;
+}
+
+.footer-column-list > li:before {
+    content: "\f054";
+    font-family: FontAwesome;
+    display: inline-block;
+    margin-left: calc(1.3em * -1);
+    width: 1.3em;
+    color: var(--secondary);
+}
+
+.footer-column-list > li > a {
+    color: var(--dark);
+    font-size: 1rem;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.footer-column-list > li > a:hover {
+    color: var(--secondary);
+}
+
+.footer-socials {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    gap: 1rem;
+}
+
+.footer-socials > a {
+    background-color: var(--secondary);
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--tertiary);
+    text-decoration: none;
+}
+
+.footer-socials > a:hover {
+    background-color: var(--primary);
+}
+
+.copyrights {
+    padding: 1rem;
+    background-color: var(--primary);
+    color: var(--tertiary);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.copyrights a {
+    text-decoration: none;
+    color: var(--secondary);
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.copyrights a:hover {
+    color: var(--dark);
+}
+
+.alt-section-heading {
+    font-size: 1.25rem;
+    font-weight: 900;
+    color: var(--primary);
+}
+
+.newsletter-content-text {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--dark);
+}
+
+.newsletter-form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    background-color: var(--tertiary);
+    border-radius: 1.25rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin: 1rem 0;
+}
+
+.newsletter-form > input {
+    width: 100%;
+    padding: 0.5rem 1rem;
+    border: none !important;
+    border-radius: 0.25rem;
+    background-color: transparent;
+    color: var(--dark);
+    font-weight: 500;
+    outline: none !important;
+    font-size: 1rem;
+}
+
+.newsletter-form > input:focus {
+    outline: none !important;
+}
+
+.newsletter-form > input:hover {
+    border: none !important;
+    outline: none !important;
+}
+
+.newsletter-form > button {
+    padding: 0.5rem 1rem;
+    border: 2px solid var(--secondary);
+    border-radius: 1.25rem;
+    background-color: var(--secondary);
+    color: var(--tertiary);
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-left: 0.5rem;
+}
+#a{
+    display:flex;
+    justify-content: center;
+    color:rgb(10, 10, 130);
+    font-size:30px;
+
+
+}
+#b{
+    display:flex;
+    justify-content:center;
+
+}
+.box{
+    display:flex;
+    
+}
+
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-logo">
+            <a href="#" class="navbar-logo-link">LOREM_IMPSUM</a>
+        </div>
+
+        <div class="navbar-menu">
+            <ul class="navbar-menu-list">
+                <li class="navbar-menu-item"><a href="#home" class="navbar-menu-link">Home</a></li>
+                <li class="navbar-menu-item"><a href="#about" class="navbar-menu-link">About</a></li>
+                <li class="navbar-menu-item"><a href="#services" class="navbar-menu-link">Services</a></li>
+                <li class="navbar-menu-item"><a href="#portfolio" class="navbar-menu-link">Portfolio</a></li>
+                <li class="navbar-menu-item"><a href="#team" class="navbar-menu-link">Team</a></li>
+
+                <li class="navbar-menu-item navbar-menu-item-dropdown">
+                    <a href="#" class="navbar-menu-link">
+                        Drop Down <i class="fa-solid fa-chevron-down fa-xs"></i>
+                        <ul class="navbar-menu-dropdown">
+                            <li class="navbar-menu-dropdown-item"><a href="#" class="navbar-menu-dropdown-link">Drop Down 1</a></li>
+                            <li class="navbar-menu-dropdown-item"><a href="#" class="navbar-menu-dropdown-link">Drop Down 2</a></li>
+                            <li class="navbar-menu-dropdown-item"><a href="#" class="navbar-menu-dropdown-link">Drop Down 3</a></li>
+                            <li class="navbar-menu-dropdown-item"><a href="#" class="navbar-menu-dropdown-link">Drop Down 4</a></li>
+                        </ul>
+                    </a>
+                </li>
+
+                <li class="navbar-menu-item"><a href="#contact" class="navbar-menu-link">Contact</a></li>
+           </ul>
+
+            <div class="navbar-cta">
+                <button class="navbar-cta-button">Get Started</button>
+            </div>
+        </div>
+    </nav>
+
+    <header class="header" id="home">
+        <div class="header-content">
+            <div class="header-content-left">
+                <div class="header-main">
+                    <h1 class="header-title">LOREM_IMPSUM</h1>
+                    <p class="header-text">LOREM_IMPSUM</p>
+                </div>
+
+                <button class="header-button">Get Started</button>
+                <button class="header-button">
+                    <i class="fa-regular fa-xl fa-play-circle"></i>
+                    <span style="margin-left: 0.25rem;">
+                        Watch Video
+                    </span>
+                </button>
+            </div>
+
+            <div class="header-content-right">
+                <img src="thumbnails/skills.jpeg" alt="header-image" class="header-content-right-image">
+            </div>
+        </div>
+    </header>
+    <div class="line">
+        <img src="thumbnails/client1.jpeg" alt="client1">
+        <img src="thumbnails/client2.jpeg" alt="client2">
+        <img src="thumbnails/client3.jpeg" alt="client3">
+        <img src="thumbnails/client4.jpeg" alt="client4">
+        <img src="thumbnails/client5.jpeg" alt="client5">
+        <img src="thumbnails/client6.jpeg" alt="client6">
+    </div>
+    <section class="about section">
+        <div class="section-heading">
+            <h1 class="section-heading-title">ABOUT US</h1>
+        </div>
+
+        <div class="about-content">
+            <div class="about-content-left">
+                <p class="about-content-left-text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Tenetur temporibus fugit officia voluptas quas!
+                </p>
+
+                <ul class="about-content-left-list">
+                    <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</li>
+                    <li>Voluptatibus, similique alias dicta aliquam quos placeat totam.</li>
+                    <li>Commodi atque quis aspernatur illo praesentium iusto.</li>
+                </ul>
+            </div>
+
+            <div class="about-content-right">
+                <p class="about-content-right-text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam repellendus velit vero, placeat rerum culpa magni fugiat sapiente autem labore nobis odit, expedita et nulla fugit libero eveniet? Aut, ut!
+                </p>
+
+                <button class="about-content-right-button">
+                    Learn More
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section class="alt-section" id="services">
+        <div class="alt-section-headline">
+            <h1 class="alt-section-headline-title"></h1>
+        </div>
+    </section>
+
+
+    <section class="services section">
+        <div class="section-heading">
+            <h1 class="section-heading-title">SERVICES</h1>
+        </div>
+
+        <div class="services-content">
+            <p class="services-content-text">
+              Magnam dolores commondi suscript.Necessitatibus eius consequatur ex aliquid fuga eum.Sit sin consecteuter velit.Quisam quos quisquam cupiditate.Et nemo qui impedit suscipit alias ea.Quia fugiat sit in iste officiis commondi quidem his quas.
+            </p>
+            <div class="services-cards cards">
+                <div class="services-card card">
+                    <div class="card-icon">
+                        <i class="fa-solid fa-2x fa-basketball"></i>
+                    </div>
+
+                    <div class="card-content">
+                        <h1 class="card-content-title">Lorem Ipsum</h1>
+
+                        <p class="card-content-text">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="services-card card">
+                    <div class="card-icon">
+                        <i class="fa-solid fa-2x fa-file-alt"></i>
+                    </div>
+
+                    <div class="card-content">
+                        <h1 class="card-content-title">Lorem Ipsum</h1>
+
+                        <p class="card-content-text">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        </p>
+                    </div>
+                </div>
+
+                <div class="services-card card">
+                    <div class="card-icon">
+                        <i class="fa-solid fa-2x fa-tachometer-alt"></i>
+                    </div>
+
+                    <div class="card-content">
+                        <h1 class="card-content-title">Lorem Ipsum</h1>
+
+                        <p class="card-content-text">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        </p>
+                    </div>
+                </div>
+
+                <div class="services-card card">
+                    <div class="card-icon">
+                        <i class="fa-solid fa-2x fa-layer-group"></i>
+                    </div>
+
+                    <div class="card-content">
+                        <h1 class="card-content-title">Lorem Ipsum</h1>
+
+                        <p class="card-content-text">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="alt-section" id="portfolio">
+        <div class="alt-section-headline">
+            <h1 class="alt-section-headline-title"></h1>
+        </div>
+    </section>
+
+    <section class="portfolio section">
+        <div class="section-heading">
+            <h1 class="section-heading-title">PORTFOLIO</h1>
+        </div>
+
+        <div class="portfolio-content">
+            <p class="portfolio-content-text">
+               Magnam dolores commondi suscript.Necessitatibus eius consequatur ex aliquid fuga eum.Sit sin consecteuter velit.Quisam quos quisquam cupiditate.Et nemo qui impedit suscipit alias ea.Quia fugiat sit in iste officiis commondi quidem his quas.
+            </p>
+
+            <div class="tabs-container">
+                <div class="tab-buttons">
+                    <button class="tab-button tab-button-active">All</button>
+                    <button class="tab-button">App</button>
+                    <button class="tab-button">Card</button>
+                    <button class="tab-button">Web</button>
+                </div>
+
+                <div class="tabs-content">
+                    <div class="tab">
+                        <div class="column">
+                            <img src="thumbnails/portfolio-1.jpeg" alt="Portfolio" class="portfolio-image">
+                            <img src="thumbnails/portfolio-details-3.jpeg" alt="Portfolio" class="portfolio-image">
+                            
+                        </div>
+
+                        <div class="column">
+                            <img src="thumbnails/portfolio-2.jpeg" alt="Portfolio" class="portfolio-image">
+                            <img src="thumbnails/portfolio-3.jpeg" alt="Portfolio" class="portfolio-image">
+                            <img src="thumbnails/portfolio-4.jpeg" alt="Portfolio" class="portfolio-image">
+                        </div>
+
+                        <div class="column">
+                            <img src="thumbnails/portfolio-details-1.jpeg" alt="Portfolio" class="portfolio-image">
+                            <img src="thumbnails/portfolio-9.jpeg" alt="Portfolio" class="portfolio-image">
+                            <img src="thumbnails/portfolio-details-2.jpeg" alt="Portfolio" class="portfolio-image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="alt-section"  id="team">
+        <div class="alt-section-headline">
+            <h1 class="alt-section-headline-title"></h1>
+        </div>
+    </section>
+
+    <section class="team section">
+        <div class="section-heading">
+            <h1 class="section-heading-title">TEAM</h1>
+        </div>
+
+        <div class="team-content">
+            <p class="team-content-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Quibusdam repellendus velit vero, placeat rerum culpa magni fugiat sapiente autem labore nobis odit, expedita et nulla fugit libero eveniet? Aut, ut!
+            </p>
+
+            <div class="team-cards user-cards">
+                <div class="user-card">
+                    <div class="user-card-image">
+                        <img src="thumbnails/team-1.jpg" alt="Team 1" class="user-card-image">
+                    </div>
+
+                    <div class="user-card-content">
+                        <h1 class="user-card-name">Lorem Ipsum</h1>
+                        <p class="user-card-role">Chief Executive Officer</p>
+
+                        <hr>
+
+                        <p class="user-card-bio">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        </p>
+
+                        <div class="user-card-socials">
+                            <a href="#" class="user-card-socials-link">
+                                <i class="fa-brands fa-facebook"></i>
+                            </a>
+
+                            <a href="#" class="user-card-socials-link">
+                                <i class="fa-brands fa-twitter"></i>
+                            </a>
+
+                            <a href="#" class="user-card-socials-link">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+
+                            <a href="#" class="user-card-socials-link">
+                                <i class="fa-brands fa-linkedin"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="user-card">
+                    <div class="user-card-image">
+                        <img src="thumbnails/team-2.jpg" alt="Team 2" class="user-card-image">
+                    </div>
+
+                    <div class="user-card-content">
+                        <h1 class="user-card-name">Lorem Ipsum</h1>
+                        <p class="user-card-role">Product Manager</p>
+
+                        <hr>
+
+                        <p class="user-card-bio">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        </p>
+
+                        <div class="user-card-socials">
+                            <a href="#" class="user-card-socials-link">
+                                <i class="fa-brands fa-facebook"></i>
+                            </a>
+
+                            <a href="#" class="user-card-socials-link">
+                                <i class="fa-brands fa-twitter"></i>
+                            </a>
+
+                            <a href="#" class="user-card-socials-link">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+
+                            <a href="#" class="user-card-socials-link">
+                                <i class="fa-brands fa-linkedin"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="user-card">
+                    <div class="user-card-image">
+                        <img src="thumbnails/team-3.jpg" alt="Team 3" class="user-card-image">
+                    </div>
+
+                    <div class="user-card-content">
+                        <h1 class="user-card-name">Lorem Ipsum</h1>
+                        <p class="user-card-role">CTO</p>
+
+                        <hr>
+
+                        <p class="user-card-bio">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        </p>
+
+                        <div class="user-card-socials">
+                            <a href="#" class="user-card-socials-link">
+                                <i class="fa-brands fa-facebook"></i>
+                            </a>
+
+                            <a href="#" class="user-card-socials-link">
+                                <i class="fa-brands fa-twitter"></i>
+                            </a>
+
+                            <a href="#" class="user-card-socials-link">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+
+                            <a href="#" class="user-card-socials-link">
+                                <i class="fa-brands fa-linkedin"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="user-card">
+                    <div class="user-card-image">
+                        <img src="thumbnails/team-4.jpg" alt="Team 4" class="user-card-image">
+                    </div>
+
+                    <div class="user-card-content">
+                        <h1 class="user-card-name">Lorem Ipsum</h1>
+                        <p class="user-card-role">Accountant</p>
+
+                        <hr>
+
+                        <p class="user-card-bio">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        </p>
+
+                        <div class="user-card-socials">
+                            <a href="#" class="user-card-socials-link">
+                                <i class="fa-brands fa-facebook"></i>
+                            </a>
+
+                            <a href="#" class="user-card-socials-link">
+                                <i class="fa-brands fa-twitter"></i>
+                            </a>
+
+                            <a href="#" class="user-card-socials-link">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+
+                            <a href="#" class="user-card-socials-link">
+                                <i class="fa-brands fa-linkedin"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</body>
+</html>
